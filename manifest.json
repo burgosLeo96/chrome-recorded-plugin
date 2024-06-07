@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Recorder Extension",
+  "description": "Extension to record your voice and transcript it",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "web_accessible_resources": [
+    {
+      "resources": ["transcript-index.html"],
+      "matches": ["https://developer.chrome.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "js": ["scripts/index.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "chrome_extension.png"
+  }
+}
